@@ -1,3 +1,5 @@
+const apiProduct = "http://api.amarboy.tk/product"
+const apiTransaction = "http://api.amarboy.tk/transaction"
 new Vue({
 	el: '#app',
 	data: {
@@ -8,7 +10,7 @@ new Vue({
 	},
 	methods : {
 		getAllProduct(){
-			axios.get('http://localhost:3000/product')
+			axios.get(apiProduct)
 			.then(response => {	
 				response.data.forEach(product => {
 			// console.log(product.productId)	
@@ -30,7 +32,7 @@ new Vue({
 			});							
 		},
 		getAllTransaction(){
-			axios.get('http://localhost:3000/transaction/')
+			axios.get(apiTransaction)
 			.then(response => {
 				response.data.forEach(transaction => {
 					this.transactions.push(transaction);
@@ -44,7 +46,7 @@ new Vue({
 			if(event.length == 0){
 				alert('Pick the item first')
 			}else{
-				axios.post('http://localhost:3000/transaction/', this.carts)
+				axios.post(apiTransaction, this.carts)
 				.then(response => {
 					console.log(response)
 					this.carts.forEach(cart => {

@@ -1,4 +1,5 @@
 // $('.gal').hide()
+const api = 'http://api.amarboy.tk/product'
 new Vue({
 	el: '#app',
 	data: {
@@ -7,7 +8,7 @@ new Vue({
 	},
 	methods : {
 		getAllProduct(){
-			axios.get('http://localhost:3000/product')
+			axios.get(api)
 			.then(response => {	
 				response.data.forEach(product => {
 					this.products.push(product)	
