@@ -1,5 +1,6 @@
-const mongoose = require('mongoose').connect('mongodb://localhost:27017/ecommerce');
+const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
+
 
 
 const productSchema = new Schema({

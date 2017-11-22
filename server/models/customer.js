@@ -1,4 +1,4 @@
-const mongoose = require('mongoose').connect('mongodb://localhost:27017/library');
+const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 
 

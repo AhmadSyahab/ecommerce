@@ -16,7 +16,6 @@ function findAll(req,res) {
 
 function makeTransaction(req,res) {
 	let product = []
-	console.log(req.body)
 	req.body.forEach(body => {
 		product.push({
 			productId : body._id,
